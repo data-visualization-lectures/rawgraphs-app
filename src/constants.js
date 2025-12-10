@@ -131,5 +131,6 @@ export const CHART_CATEGORY_LABELS = {
   "networks": "ネットワーク",
   "proportions": "比率",
   "time series": "時系列",
-  "Dispersions": "空間的分布"
+  "Dispersions": "空間的分布",
+  "Correlations": "空間的分布"
 }
