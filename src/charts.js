@@ -45,6 +45,8 @@ let charts = [
   boxplot,
   bubblechart,
   bumpchart,
+  calendarHeatmap,
+  chorddiagram,
   circlepacking,
   circularDendrogram,
   contourPlot,
@@ -56,6 +58,7 @@ let charts = [
   linechart,
   matrixplot,
   parallelcoordinates,
+  piechart,
   radarchart,
   sankeydiagram,
   slopechart,
@@ -64,10 +67,7 @@ let charts = [
   treemap,
   violinplot,
   voronoidiagram,
-  chorddiagram,
-  piechart,
   voronoitreemap,
-  calendarHeatmap,
 ]
 
 // 日本語説明文の翻訳
