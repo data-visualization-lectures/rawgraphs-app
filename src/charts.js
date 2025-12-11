@@ -31,6 +31,7 @@ import {
   piechart,
   voronoitreemap,
 } from '@rawgraphs/rawgraphs-charts'
+import { calendarheatmap } from '@rawgraphs/rawgraphs-calendar-heatmap'
 
 // New charts, not included into first release.
 // Comment at necessity.
@@ -65,7 +66,11 @@ let charts = [
   voronoidiagram,
   chorddiagram,
   piechart,
+  voronoidiagram,
+  chorddiagram,
+  piechart,
   voronoitreemap,
+  calendarheatmap,
 ]
 
 // 日本語説明文の翻訳
@@ -100,7 +105,8 @@ const chartDescriptions = {
   'rawgraphs.voronoidiagram': 'それぞれの点の周りに、その点が一番近い領域を作って表示するグラフです。散布図上の各点を中心に、画面を仕切りで区切ったような見た目になります。点と点の間の距離や、それぞれの点の勢力範囲を視覚的に理解するのに便利です。',
   'rawgraphs.chorddiagram': '項目間の相互関係を円環状に配置し、紐（コード）で結んで関係の強さを表すチャートです。項目は円周上に配置され、項目間のつながりは円の中を通る曲線で表されます。紐の太さが関係の強さや量を表しており、複雑なネットワーク関係をコンパクトに可視化するのに適しています。',
   'rawgraphs.piechart': '全体に対する各部分の割合を扇形の面積で表すチャートです。円全体を100%とし、各項目の構成比率を扇形の中心角の大きさで表現します。カテゴリーごとのシェアや比率を一目で比較するのに最も一般的なグラフです。',
-  'rawgraphs.voronoitreemap': 'ツリー構造のあるデータを、多角形の領域分割（ボロノイ分割）で表すチャートです。通常のツリーマップのような四角形ではなく、有機的な形の多角形で領域を分割し、その面積で値の大きさを表します。階層構造を持ちながらも、より柔軟で自然な見た目の分割表現が可能です。'
+  'rawgraphs.voronoitreemap': 'ツリー構造のあるデータを、多角形の領域分割（ボロノイ分割）で表すチャートです。通常のツリーマップのような四角形ではなく、有機的な形の多角形で領域を分割し、その面積で値の大きさを表します。階層構造を持ちながらも、より柔軟で自然な見た目の分割表現が可能です。',
+  'rawgraphs.calendarHeatmap': 'カレンダーの日付に合わせてデータを色の濃淡で表示するチャートです。1年間全体を見渡して、特定の時期や曜日による傾向やパターン（シーズナリティ）を見つけるのに適しています。GitHubのコントリビューショングラフのように、日々の活動量などを可視化時によく使われます。'
 }
 
 // チャートの説明文のみを日本語に上書き（名前は変更しない）
