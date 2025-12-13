@@ -202,8 +202,82 @@ const ChartOptions = ({
   error,
   mappedData,
 }) => {
+  // チャートオプションの翻訳設定
   const optionsConfig = useMemo(() => {
-    return getOptionsConfig(chart?.visualOptions)
+    const config = getOptionsConfig(chart?.visualOptions)
+
+    const translations = {
+      // Artboard
+      'Width (px)': '幅 (px)',
+      'Height (px)': '高さ (px)',
+      'Background': '背景色',
+      'Margin (top)': '余白（上）',
+      'Margin (right)': '余白（右）',
+      'Margin (bottom)': '余白（下）',
+      'Margin (left)': '余白（左）',
+      'Show legend': '凡例を表示',
+      'Legend width': '凡例の幅',
+
+      // Generic & Chart
+      'Color scale': 'カラースケール',
+      'Label': 'ラベル',
+      'Show labels': 'ラベルを表示',
+      'Show grid': 'グリッドを表示',
+      'Stroke width': '線の太さ',
+      'Padding': 'パディング',
+      'Orientation': '方向',
+      'Show outline': '輪郭線を表示',
+      'Show stroke': '線を表示',
+      'Curve type': '曲線の種類',
+      'Dots diameter': 'ドットの直径',
+      'Min diameter': '最小直径',
+      'Max diameter': '最大直径',
+      'Donut thickness': 'ドーナツの太さ',
+      'Show pies titles': 'パイのタイトルを表示',
+      'Show series titles': '系列のタイトルを表示',
+      'Use same scale': '同じスケールを使用',
+      'Auto hide labels': 'ラベルを自動的に隠す',
+      'Labels position': 'ラベルの位置',
+      'Vertical': '垂直',
+      'Horizontal': '水平',
+      'Number of columns': '列数',
+      'Padding between bars': '棒の間隔',
+      'Padding between sets': 'セット間の間隔',
+
+      // Sorting
+      'Sort bars by': '並び順（棒）',
+      'Sort series by': '並び順（系列）',
+      'Sort X axis by': 'X軸の並び順',
+      'Sort Y axis by': 'Y軸の並び順',
+      'Sort arcs by': 'アークの並び順',
+      'Sort chords by': 'コードの並び順',
+      'Sort circles by': '円の並び順',
+      'Sort groups by': 'グループの並び順',
+      'Sort nodes by': 'ノードの並び順',
+      'Sort pies by': 'パイの並び順',
+      'Sort stacks by': 'スタックの並び順',
+      'Sort streams by': 'ストリームの並び順',
+      'Sort violins by': 'バイオリンの並び順',
+      'Ascending': '昇順',
+      'Descending': '降順',
+      'Original': 'オリジナル',
+      'Name': '名前',
+      'Total value (descending)': '合計値（降順）',
+      'Total value (ascending)': '合計値（昇順）',
+      'Start date (descending)': '開始日（降順）',
+      'Start date (ascending)': '開始日（昇順）',
+    }
+
+    const translatedConfig = {}
+    Object.keys(config).forEach(key => {
+      const option = config[key]
+      translatedConfig[key] = {
+        ...option,
+        label: translations[option.label] || option.label
+      }
+    })
+
+    return translatedConfig
   }, [chart])
 
   const [collapseStatus, setCollapseStatus] = useState(() => {
