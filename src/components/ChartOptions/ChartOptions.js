@@ -266,6 +266,14 @@ const ChartOptions = ({
       'Total value (ascending)': '合計値（昇順）',
       'Start date (descending)': '開始日（降順）',
       'Start date (ascending)': '開始日（昇順）',
+
+      // Additional Requests
+      'Nodes width': 'ノードの幅',
+      'Default': 'デフォルト',
+      'Show nodes values': 'ノードの値を表示',
+      'Links opacity (0-1)': 'リンクの不透明度 (0-1)',
+      'Links blend mode': 'リンクのブレンドモード',
+      'Flows alignment': 'フローの配置',
     }
 
     const translatedConfig = {}
