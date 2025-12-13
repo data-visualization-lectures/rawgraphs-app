@@ -91,7 +91,7 @@ function DataLoader({
     },
     {
       id: 'samples',
-      name: 'サンプルデータを使ってみる',
+      name: 'サンプルデータを使う',
       message: '',
       loader: (
         <DataSamples
