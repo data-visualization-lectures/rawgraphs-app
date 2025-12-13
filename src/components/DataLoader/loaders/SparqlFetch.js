@@ -61,7 +61,7 @@ export default function SparqlFetch({
       })
       .catch((err) => {
         setLoadingError(
-          'It was not possible to execute the query on the given endpoint'
+          '指定されたエンドポイントでクエリを実行できませんでした'
         )
       })
   }, [parsedQuery, setLoadingError, setUserInput, url])

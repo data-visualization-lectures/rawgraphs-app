@@ -19,7 +19,7 @@ export default function UrlFetch({ userInput, setUserInput, setLoadingError }) {
       setUserInput(data, source)
       setLoadingError(null)
     } catch (e) {
-      setLoadingError("Loading error. "+e.message)
+      setLoadingError("読み込みエラー: " + e.message)
     }
   }
   return (
