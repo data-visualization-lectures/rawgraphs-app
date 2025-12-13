@@ -95,15 +95,15 @@ export const separatorsList = Object.keys(separatorsLabels)
 export const DefaultSeparator = ","
 
 export const AGGREGATIONS_LABELS = {
-  "count": "数（Count）",
+  "count": "行数（Count）",
   "mean": "平均値（Average）",
   "median": "中央値（Median）",
   "max": "最大値（Max）",
   "min": "最小値（Min）",
-  "countDistinct": "ユニーク値をカウント（Count unique）",
+  "countDistinct": "行数：ユニーク値のみ（Count unique）",
   "sum": "合計（Sum）",
   "csv": "CSV",
-  "csvDistinct": "CSV (unique)",
+  "csvDistinct": "CSV：ユニーク値のみ",
 }
 
 export const SCALES_LABELS = {
