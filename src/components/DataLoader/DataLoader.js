@@ -200,19 +200,19 @@ function DataLoader({
     const column = Object.keys(errors[0].error)[0]
     return (
       <span>
-        おっと、<span className="font-weight-bold">{column} 列</span>の<span className="font-weight-bold">{row} 行</span>をチェックしてみてください.{' '}
+        <span className="font-weight-bold">{row} 行目</span>の<span className="font-weight-bold">{column} 列</span>を確認してください。{' '}
         {errors.length === 2 && (
           <>
             {' '}
             {' '}
-            <span className="font-weight-bold">{errors[1].row + 1}</span>行に別なイシューがあります。{' '}
+            <span className="font-weight-bold">{errors[1].row + 1}</span>行目にも別の問題があります。{' '}
           </>
         )}
         {errors.length > 2 && (
           <>
             {' '}
             {' '}
-            <span className="font-weight-bold">{errors.length - 1}</span> 行、イシューがあります。
+            他 <span className="font-weight-bold">{errors.length - 1}</span> 行に問題があります。
             {' '}
           </>
         )}
@@ -220,9 +220,9 @@ function DataLoader({
           <>
             残りの{' '}
             <span className="font-weight-bold">
-              {successRows} 行{successRows > 1 && <>s</>}
+              {successRows} 行
             </span>{' '}
-            {successRows === 1 && <>s</>} は良さげです。
+            は正常に読み込めました。
           </>
         )}
       </span>
